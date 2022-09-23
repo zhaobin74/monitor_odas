@@ -49,6 +49,8 @@ while True:
    for job in stopped:
        cp = subprocess.run(["sbatch", job['path']+"/gcm_run.j"])      
        if cp.returncode < 0:
-           print(jobs['name']+' DID NOT  resubmit')
+           print(job['name']+' DID NOT  resubmit')
+       else:
+           print(job['name']+' resubmitted')
  
    sleep(1200) # interval (seconds) to check job status   
