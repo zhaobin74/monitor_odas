@@ -51,4 +51,4 @@ while True:
        if cp.returncode < 0:
            print(jobs['name']+' DID NOT  resubmit')
  
-   sleep(60)  
+   sleep(1200) # interval (seconds) to check job status   
