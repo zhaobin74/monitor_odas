@@ -12,8 +12,9 @@
 
 }
 
-
 ``` 
+where ```exp1``` and ```exp2``` are names of the experiment to be monitored; ```"path"``` refers the directory where ```gcm_run.j``` resides
+
   - Execute the command below with python3
 
 ```csh
