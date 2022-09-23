@@ -2,7 +2,7 @@
 
 ## How to use
 
-  - First create a jobs.json file with content like
+  - First create a ```jobs.json``` file with content like
 
 ```json
 {
