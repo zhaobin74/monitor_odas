@@ -23,3 +23,5 @@ python -u ./monitor.py >& job-`date +%g%m%d-%H%M%S`.log &
 
 ```
 
+  - Above command puts the monitor process in background. To stop the process, either delete ```jobs.json``` file or rename it.
+
