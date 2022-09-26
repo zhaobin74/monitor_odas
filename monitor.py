@@ -5,6 +5,7 @@ import json
 import datetime
 import os
 import sys
+import glob
 
 
 user = os.environ['USER']
@@ -47,12 +48,12 @@ while True:
            print(job['name'], 'stopped')
            stopped.append(job) 
    for job in stopped:
-       oana = glob.glob(job['path']+"/ocean_das/oana-*") 
-       oana.sort()
-       cp = subprocess.run(["/bin/rm", "-rf", oana[-1]])      
-       if cp.returncode < 0:
-           print("failed to delete last oana dir ", oana[-1])  
-           continue
+       #oana = glob.glob(job['path']+"/ocean_das/oana-*") 
+       #oana.sort()
+       #cp = subprocess.run(["/bin/rm", "-rf", oana[-1]])      
+       #if cp.returncode < 0:
+       #    print("failed to delete last oana dir ", oana[-1])  
+       #    continue
        cp = subprocess.run(["sbatch", job['path']+"/gcm_run.j"])      
        if cp.returncode < 0:
            print(job['name']+' DID NOT  resubmit')
